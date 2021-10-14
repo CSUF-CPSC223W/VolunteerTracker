@@ -9,6 +9,11 @@ import UIKit
 
 /* ViewController class for the AddVolunteerController view.
  
+ Created by selecting: File > New > File > Cocoa Touch Class > Subclass of: UIViewController
+ 
+ On the Main storyboard, make sure the AddVolunteer ViewController's Custom class is assigned to this
+ ViewController.
+ 
  Take note that we ctrl+ckicked the "Add Volunteer" button to the Exit icon (top bar of the layout)
  to give the effect of unwinding/going back to main.
  */
