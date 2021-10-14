@@ -1,24 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X0C-6O-XyP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VolunteerTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3PS-jw-ByJ">
+                                <rect key="frame" x="56.5" y="386" width="301.5" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteer Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhj-4E-8XW">
+                                        <rect key="frame" x="0.0" y="0.0" width="301.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-Vn-Ewg">
+                                        <rect key="frame" x="0.0" y="52" width="301.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add Volunteer"/>
+                                        <connections>
+                                            <segue destination="ZkH-gb-qzo" kind="show" id="eEF-CK-fYT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocG-i3-H18">
+                                        <rect key="frame" x="0.0" y="93" width="301.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="View Volunteers"/>
+                                        <connections>
+                                            <segue destination="QAb-dr-roe" kind="push" id="ABQ-4E-Sfk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3PS-jw-ByJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ALd-RT-XsP"/>
+                            <constraint firstItem="3PS-jw-ByJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d3u-dT-7iz"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UgM-Lm-TXG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="826" y="82"/>
+        </scene>
+        <!--View Volunteers-->
+        <scene sceneID="8il-Cf-dkS">
+            <objects>
+                <viewController id="QAb-dr-roe" customClass="ViewVolunteersViewController" customModule="VolunteerTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oDp-lG-EqE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71w-fa-lI5" userLabel="volunteers">
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dvO-Xn-GY6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="71w-fa-lI5" firstAttribute="centerY" secondItem="oDp-lG-EqE" secondAttribute="centerY" id="cuA-LD-b9t"/>
+                            <constraint firstItem="71w-fa-lI5" firstAttribute="centerX" secondItem="oDp-lG-EqE" secondAttribute="centerX" id="n2J-9E-o9z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="View Volunteers" id="Lte-Ih-bBp"/>
+                    <connections>
+                        <outlet property="volunteerLabel" destination="71w-fa-lI5" id="tV7-q0-nIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNT-ew-ykO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1787" y="324"/>
+        </scene>
+        <!--Add Volunteer-->
+        <scene sceneID="fdD-Ni-SDf">
+            <objects>
+                <viewController id="ZkH-gb-qzo" customClass="AddVolunteerViewController" customModule="VolunteerTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fKC-QM-XZX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="uzc-51-16S">
+                                <rect key="frame" x="10" y="98" width="394" height="125"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cof-tT-dJh" userLabel="name">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTi-KV-5Zh" userLabel="address">
+                                        <rect key="frame" x="0.0" y="47" width="394" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4H-Lg-B5y" userLabel="addVolunteer">
+                                        <rect key="frame" x="0.0" y="94" width="394" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add Volunteer"/>
+                                        <connections>
+                                            <action selector="addVolunteer:" destination="ZkH-gb-qzo" eventType="touchUpInside" id="7IZ-Md-SgN"/>
+                                            <segue destination="I1s-Mh-iSd" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="elb-x8-shP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HKJ-0J-nuX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HKJ-0J-nuX" firstAttribute="trailing" secondItem="uzc-51-16S" secondAttribute="trailing" constant="10" id="3cx-Vc-B9r"/>
+                            <constraint firstItem="uzc-51-16S" firstAttribute="top" secondItem="HKJ-0J-nuX" secondAttribute="top" constant="10" id="GDv-fD-V9d"/>
+                            <constraint firstItem="uzc-51-16S" firstAttribute="centerX" secondItem="fKC-QM-XZX" secondAttribute="centerX" id="s2c-by-KmM"/>
+                            <constraint firstItem="uzc-51-16S" firstAttribute="leading" secondItem="HKJ-0J-nuX" secondAttribute="leading" constant="10" id="wnA-rT-pTb"/>
+                            <constraint firstItem="uzc-51-16S" firstAttribute="top" secondItem="HKJ-0J-nuX" secondAttribute="top" constant="10" id="yEk-Bp-Mc2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Volunteer" id="2Nk-LW-2Fs"/>
+                    <connections>
+                        <outlet property="address" destination="eTi-KV-5Zh" id="9eR-3z-XiC"/>
+                        <outlet property="name" destination="cof-tT-dJh" id="Gl0-yw-eEc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sH-8k-vZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="I1s-Mh-iSd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="-337.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Ft-5T-5PF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X0C-6O-XyP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HFO-kw-0bi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HYg-sW-TFU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a93-sp-HTL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="70.982142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

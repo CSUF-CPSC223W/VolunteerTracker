@@ -16,6 +16,9 @@
 		ECAA76262718CEE0007EDD46 /* VolunteerTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA76252718CEE0007EDD46 /* VolunteerTrackerTests.swift */; };
 		ECAA76302718CEE0007EDD46 /* VolunteerTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA762F2718CEE0007EDD46 /* VolunteerTrackerUITests.swift */; };
 		ECAA76322718CEE0007EDD46 /* VolunteerTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA76312718CEE0007EDD46 /* VolunteerTrackerUITestsLaunchTests.swift */; };
+		ECAA76412718D75E007EDD46 /* AddVolunteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA76402718D75E007EDD46 /* AddVolunteerViewController.swift */; };
+		ECAA76432718D7AF007EDD46 /* ViewVolunteersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA76422718D7AF007EDD46 /* ViewVolunteersViewController.swift */; };
+		ECAA76452718D82C007EDD46 /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA76442718D82C007EDD46 /* Volunteer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		ECAA762B2718CEE0007EDD46 /* VolunteerTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolunteerTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAA762F2718CEE0007EDD46 /* VolunteerTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTrackerUITests.swift; sourceTree = "<group>"; };
 		ECAA76312718CEE0007EDD46 /* VolunteerTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECAA76402718D75E007EDD46 /* AddVolunteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVolunteerViewController.swift; sourceTree = "<group>"; };
+		ECAA76422718D7AF007EDD46 /* ViewVolunteersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVolunteersViewController.swift; sourceTree = "<group>"; };
+		ECAA76442718D82C007EDD46 /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				ECAA76172718CEE0007EDD46 /* Assets.xcassets */,
 				ECAA76192718CEE0007EDD46 /* LaunchScreen.storyboard */,
 				ECAA761C2718CEE0007EDD46 /* Info.plist */,
+				ECAA76402718D75E007EDD46 /* AddVolunteerViewController.swift */,
+				ECAA76422718D7AF007EDD46 /* ViewVolunteersViewController.swift */,
+				ECAA76442718D82C007EDD46 /* Volunteer.swift */,
 			);
 			path = VolunteerTracker;
 			sourceTree = "<group>";
@@ -260,6 +269,9 @@
 			files = (
 				ECAA76132718CEDD007EDD46 /* ViewController.swift in Sources */,
 				ECAA760F2718CEDD007EDD46 /* AppDelegate.swift in Sources */,
+				ECAA76452718D82C007EDD46 /* Volunteer.swift in Sources */,
+				ECAA76412718D75E007EDD46 /* AddVolunteerViewController.swift in Sources */,
+				ECAA76432718D7AF007EDD46 /* ViewVolunteersViewController.swift in Sources */,
 				ECAA76112718CEDD007EDD46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
